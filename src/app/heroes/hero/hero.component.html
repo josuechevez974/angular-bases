@@ -1,0 +1,28 @@
+<div>
+    <h3>{{ nombre }}</h3>
+    <hr>
+    <p class="text-muted">
+        Descripcion:
+        <br>
+        Nombre de heroe
+        {{ nombre }}
+        con edad de
+        {{ edad }} años
+    </p>
+
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+            <button *ngIf="nombre !== 'Spiderman'" (click)="changeHeroName()" class="btn btn-sm btn-primary mx-1">
+                Cambiar nombre
+            </button>
+
+            <button *ngIf="edad !== 46" (click)="changeHeroAge()" class="btn btn-sm btn-primary mx-1">
+                Cambiar Edad
+            </button>
+
+            <button type="button" (click)="resetForm()" class="btn btn-sm btn-dark mx-1">
+                Reiniciar
+            </button>
+        </div>
+    </div>
+</div>
