@@ -1,14 +1,14 @@
-FROM node:alpine
+FROM node:17-alpine
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /app
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json /app
 
 RUN npm install
 
-COPY . .
+COPY . /app
 
 RUN npm install -g @angular/cli
 
